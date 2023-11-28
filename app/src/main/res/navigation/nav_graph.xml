@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/etablirSessionFragment">
+
+    <fragment
+        android:id="@+id/etablirSessionFragment"
+        android:name="ca.qc.cgodin.projetfinal.EtablirSessionFragment"
+        android:label="fragment_etablir_session"
+        tools:layout="@layout/fragment_etablir_session" >
+        <action
+            android:id="@+id/action_etablirSessionFragment_to_indexFragment"
+            app:destination="@id/indexFragment" />
+        <action
+            android:id="@+id/action_etablirSessionFragment_to_enregistrementFragment"
+            app:destination="@id/enregistrementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/indexFragment"
+        android:name="ca.qc.cgodin.projetfinal.IndexFragment"
+        android:label="fragment_index"
+        tools:layout="@layout/fragment_index" >
+        <action
+            android:id="@+id/action_indexFragment_to_etablirSessionFragment"
+            app:destination="@id/etablirSessionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enregistrementFragment"
+        android:name="ca.qc.cgodin.projetfinal.EnregistrementFragment"
+        android:label="fragment_enregistrement"
+        tools:layout="@layout/fragment_enregistrement" >
+        <action
+            android:id="@+id/action_enregistrementFragment_to_etablirSessionFragment"
+            app:destination="@id/etablirSessionFragment" />
+    </fragment>
+</navigation>
